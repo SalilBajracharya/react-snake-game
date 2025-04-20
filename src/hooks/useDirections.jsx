@@ -5,22 +5,14 @@ function useDirection() {
 
     useEffect(() => {
         const handleKeyDown = (e) => {
-            switch (e.key) {
-                case "ArrowUp":
-                    setDirection("UP");
-                    break;
-
-                case "ArrowDown":
-                    setDirection("DOWN");
-                    break;
-
-                case "ArrowLeft":
-                    setDirection("LEFT");
-                    break;
-
-                case "ArrowRight":
-                    setDirection("RIGHT");
-                    break;
+            if (e.key === "ArrowUp") {
+                setDirection("UP");
+            } else if (e.key === "ArrowDown") {
+                setDirection("DOWN");
+            } else if (e.key === "ArrowLeft") {
+                setDirection("LEFT");
+            } else if (e.key === "ArrowRight") {
+                setDirection("RIGHT");
             }
         };
 
